@@ -12,25 +12,25 @@ app.use(express.static(__dirname + "/public"))
 
 app.get("/", (req, res) => {
     res.render("index", {
-        title1: "t1",
+        title1: "Index from app.js",
     })
 });
 
 app.get("/services", (req, res) => {
     res.render("services", {
-        titleServices1: "Services1"
+        titleServices1: "Services1 from app.js"
     })
 });
 
 app.get("/products", (req, res) => {
     res.render("products", {
-        titleProduct1: "producto 1"
+        titleProduct1: "producto 1 from app.js"
     })
 })
 
 app.get("/contact", (req, res) => {
     res.render("contact", {
-        titleContact1: "contact 1",
+        titleContact1: "contact 1 from app.js",
     })
 })
 
