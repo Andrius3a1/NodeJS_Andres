@@ -11,34 +11,23 @@ app.set("views", path.join(__dirname + "/views"));
 app.use(express.static(__dirname + "/public"))
 
 app.get("/", (req, res) => {
-    res.render("index", {
-        title1: "Index from app.js",
-    })
+    res.render("index", { title1: "This is the START page" })
 });
 
 app.get("/services", (req, res) => {
-    res.render("services", {
-        titleServices1: "Services1 from app.js"
-    })
+    res.render("services", { titleServices: "This is the SERVICES page" })
 });
 
 app.get("/products", (req, res) => {
-    res.render("products", {
-        titleProduct1: "producto 1 from app.js"
-    })
+    res.render("products", { titleProduct: "This is the PRODUCTS page" })
 })
 
 app.get("/contact", (req, res) => {
-    res.render("contact", {
-        titleContact1: "contact 1 from app.js",
-    })
+    res.render("contact", { titleContact: "This is the CONTACT page" })
 })
 
 app.use((req, res, next) => {
-    res.status(404).render("404", {
-        title404: "This is 404 page",
-        dinamicTitle: "Dinamic title from app.js"
-    });
+    res.status(404).render("404", { title404: "This is 404 page" });
 })
 
 app.listen(port, () => {
